@@ -32,9 +32,9 @@
                 <img src="./Imagens/img1.png" class="starbucks">
             </div>
             <ul class="thumb">
-                <li><img src="./Imagens/thumb1.png"></li>
-                <li><img src="./Imagens/thumb2.png"></li>
-                <li><img src="./Imagens/thumb3.png"></li>
+                <li><img src="./Imagens/thumb1.png" onclick="mudarImagem('./Imagens/img1.png');mudarCorCirculo('#017143')"></li>
+                <li><img src="./Imagens/thumb2.png" onclick="mudarImagem('./Imagens/img2.png');mudarCorCirculo('#EB7495')"></li>
+                <li><img src="./Imagens/thumb3.png" onclick="mudarImagem('./Imagens/img3.png');mudarCorCirculo('#D752B1')"></li>
             </ul>
             <ul class="social-midias">
                 <li><a href="#"><img src="./Imagens/facebook.png" alt="Facebook"></a></li>
@@ -43,6 +43,17 @@
             </ul>
         </div>
     </section>
+
+    <script type="text/javascript">
+        function mudarImagem(anything) {
+            document.querySelector('.starbucks').src = anything;
+        }
+
+        function mudarCorCirculo(color) {
+            const circle = document.querySelector('.circle');
+            circle.style.background = color;
+        }
+    </script>
 </body>
 
 </html>
